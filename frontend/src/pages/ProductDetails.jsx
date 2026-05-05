@@ -10,7 +10,7 @@ function ProductDetails() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    fetch(`/products/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data.product); 

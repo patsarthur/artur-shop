@@ -8,7 +8,7 @@ function NewCommentForm({ productId, onAdd }) {
 
     if (!text.trim()) return;
 
-    const res = await fetch("/comments", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/comments`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
